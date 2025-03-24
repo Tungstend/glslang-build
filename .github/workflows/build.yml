@@ -21,7 +21,7 @@ jobs:
       - name: Install build dependencies
         run: |
           sudo apt update
-          sudo apt -y install wget python3 python-is-python3 unzip zip
+          sudo apt -y install wget python3 python-is-python3 unzip zip git cmake
 
       - name: Build with script
         run: bash "${{matrix.arch}}.sh"
