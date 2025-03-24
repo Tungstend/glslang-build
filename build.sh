@@ -2,7 +2,7 @@ git clone https://github.com/KhronosGroup/glslang.git
 
 chmod -R 777 glslang
 
-wget -nc -nv -O  https://dl.google.com/android/repository/android-ndk-r27b-linux.zip
+wget https://dl.google.com/android/repository/android-ndk-r27b-linux.zip
 unzip -q android-ndk-r27b-linux.zip
 export ANDROID_NDK_HOME=$PWD/android-ndk-r27b
 
