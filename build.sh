@@ -11,4 +11,5 @@ cd glslang
 
 cmake -B $PWD/build -G "Unix Makefiles" -DCMAKE_INSTALL_PREFIX="$PWD/install/$ABI" -DANDROID_ABI=$ABI -DCMAKE_BUILD_TYPE=Release -DANDROID_STL=c++_static -DANDROID_PLATFORM=android-21 -DCMAKE_SYSTEM_NAME=Android -DANDROID_TOOLCHAIN=clang -DANDROID_ARM_MODE=$ARM_MODE -DCMAKE_MAKE_PROGRAM=$ANDROID_NDK_HOME/prebuilt/linux-x86_64/bin/make -DCMAKE_TOOLCHAIN_FILE=$ANDROID_NDK_HOME/build/cmake/android.toolchain.cmake
 
+cd build
 make -j4 install
