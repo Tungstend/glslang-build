@@ -1,6 +1,3 @@
-apt update
-apt install git python3 python-is-python3 zip unzip -y
-
 git clone https://github.com/KhronosGroup/glslang.git
 
 chmod -R 777 glslang
