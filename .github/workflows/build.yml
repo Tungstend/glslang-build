@@ -18,6 +18,11 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
+      - name: Install build dependencies
+        run: |
+          sudo apt update
+          sudo apt -y install wget python3 python-is-python3 unzip zip
+
       - name: Build with script
         run: bash "${{matrix.arch}}.sh"
 
