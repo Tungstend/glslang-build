@@ -14,6 +14,6 @@ cmake -B $PWD/build -G "Unix Makefiles" -DCMAKE_INSTALL_PREFIX="$PWD/install/$AB
 cd build
 make -j4 install
 
-cd ../install/$ABI
-export STRIP_PATH="$ANDROID_NDK_HOME/toolchains/llvm/prebuilt/linux-x86_64/bin/llvm-strip"
-find . -type f $ -name "*.a" -o -name "*.so" $ -exec "$STRIP_PATH" {} \;
+cd ../install/$ABI/lib
+STRIP_PATH="$ANDROID_NDK_HOME/toolchains/llvm/prebuilt/linux-x86_64/bin/llvm-strip"
+find . -type f \( -name "*.a" -o -name "*.so" \) -exec "$STRIP_PATH" {} \;
