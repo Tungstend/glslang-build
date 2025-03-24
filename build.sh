@@ -15,4 +15,5 @@ cd build
 make -j4 install
 
 cd ../install/$ABI
-find . -type f $ -name "*.a" -o -name "*.so" -o -executable $ -exec strip --strip-unneeded {} \;
+export STRIP_PATH="$ANDROID_NDK_HOME/toolchains/llvm/prebuilt/linux-x86_64/bin/llvm-strip"
+find . -type f $ -name "*.a" -o -name "*.so" $ -exec "$STRIP_PATH" {} \;
