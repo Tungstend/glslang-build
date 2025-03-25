@@ -28,7 +28,7 @@ cd build
 make -j4 install
 
 cd ../install/$ABI/lib
-find . -type f \( -name "*.a" -o -name "*.so" \) -exec "$STRIP_PATH" --strip-unneeded {} \;
+find . -type f \( -name "*.a" -o -name "*.so" \) -exec "$STRIP_PATH" {} \;
 
 cd ../../../..
 
